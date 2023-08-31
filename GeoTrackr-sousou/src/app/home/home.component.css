@@ -1,0 +1,160 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  background: linear-gradient(#131a25, #212125);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  float: left;
+}
+
+.main-content {
+  margin-left: 260px;
+}
+
+.icon-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: inline;
+}
+
+.geoTracker {
+  width: 220px;
+  height: 50px;
+  left: 20px;
+  top: 20px;
+  position: relative;
+  display: flex;
+}
+
+.IMG {
+  position: relative;
+  top: 40px;
+  left: 13px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.word-container {
+  margin-left: 10px;
+}
+
+.NAME {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  color: #b0c2cb;
+  font-size: 18px;
+  font-family: Bahnschrift;
+}
+
+.dropdown-link {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Bahnschrift;
+  transition: background-color 0.7s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%; /* Extend the width to match the sidebar */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 2; /* Increase the z-index value to make the dropdown menu appear above other elements */
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 16px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.7s ease, height 1.7s ease;
+
+}
+.dropdown-container.show {
+  display: block;
+  height: auto; /* Transition to 'auto' height for smooth appearance */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.OPTION{
+  margin-left: 20px;
+}
+
+/* Sidebar links */
+A {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  font-family: Bahnschrift;
+  transition: background-color 0.7s ease;
+}
+
+/* Active/current link */
+.A.active {
+  background-color: #b4c8d0;
+  color: black;
+}
+
+/* Links on mouse-over */
+A:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 260px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  A {
+    float: none;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.graphs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}

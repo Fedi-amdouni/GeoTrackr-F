@@ -1,0 +1,10 @@
+
+Gtypescript:S1128"&Remove this unused import of 'NgForm'.(œÑ½°ıÿÿÿÿ
+Gtypescript:S3863	"&'@angular/forms' import is duplicated.(àö–Áøÿÿÿÿ
+Htypescript:S1128
+"'Remove this unused import of 'MatSort'.(ğò“Èùÿÿÿÿ
+?typescript:S1128"$Remove this unused import of 'User'.(¹û©G
+typescript:S1874f"ä'subscribe' is deprecated. Instead of passing separate callback arguments, use an observer argument. Signatures taking separate callback arguments will be removed in v8. Details: https://rxjs.dev/deprecations/subscribe-arguments(¢İÓÊ
+typescript:S1874t"ä'subscribe' is deprecated. Instead of passing separate callback arguments, use an observer argument. Signatures taking separate callback arguments will be removed in v8. Details: https://rxjs.dev/deprecations/subscribe-arguments(‘äû•
+‚typescript:S1874‡"ä'subscribe' is deprecated. Instead of passing separate callback arguments, use an observer argument. Signatures taking separate callback arguments will be removed in v8. Details: https://rxjs.dev/deprecations/subscribe-arguments(ßÖ—°
+‚typescript:S1874œ"ä'subscribe' is deprecated. Instead of passing separate callback arguments, use an observer argument. Signatures taking separate callback arguments will be removed in v8. Details: https://rxjs.dev/deprecations/subscribe-arguments(ÿŞî¥

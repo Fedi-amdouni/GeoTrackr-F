@@ -1,0 +1,52 @@
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: midnightblue;
+  font-family: Bahnschrift;
+
+}
+
+.form-input {
+  border: none;
+  border-bottom: 2px solid midnightblue;
+  padding: 8px 12px;
+  font-size: 18px;
+  width: 105%;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+.submit-button {
+  margin-top: 40px;
+  margin-left: 50px;
+  background-color: midnightblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #306280;
+}

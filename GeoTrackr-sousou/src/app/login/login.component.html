@@ -1,0 +1,85 @@
+<body>
+
+<div>
+  <img src="../../assets/GEOTRACKER.png" alt="notFound" style="position: relative; left: 600px; top: 50px" />
+  <img src="../../assets/Talan.png" style="position: relative; right: 450px; width: 10%; height: 4%; top: 0px" />
+  <div class="container mt-5 d-flex justify-content-center">
+    <div
+      style="background: rgba(0, 0, 0, 0.1); position: relative; left: 70px; top: 70px; width: 40%; height: 510px; border-radius: 10%"
+      class="card"
+    >
+      <div class="card-body">
+        <h3 style="color: white; position: relative; left: 60px" class="card-title">
+          <a style="color: white; text-decoration: none" href="/Register">Inscription</a>
+        </h3>
+        <h3 style="color: white; position: relative; left: 270px; bottom: 41px" class="card-title">
+          <a style="color: white" href="">Connexion</a>
+        </h3>
+        <form [formGroup]="loginForm" style="display: flex; flex-direction: column">
+
+
+          <div class="form-group">
+            <h5  for="email">Adresse mail:</h5>
+            <input
+
+              style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 85%"
+              name="email"
+              formControlName="email"
+              type="text"
+              id="email"
+              class="form-control"
+
+            />
+          </div>
+
+            <div>
+              <h5 for="password">Mot de passe:</h5>
+              <input
+                style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 85%"
+                name="password"
+                formControlName="password"
+                type="password"
+                id="password"
+                class="form-control"
+
+              />
+            </div>
+
+
+
+          <br>
+          <button (click)="onSubmit()" style="width: 40%; position: relative; left: 140px; border-radius: 10%" type="submit" class="btn btn-primary">
+            Se connecter
+          </button>
+          <br>
+          <p style="position: relative; left: 220px">OU</p>
+          <button (click)="loginWithFacebook()" style="background: transparent; width: 51%; color: white" type="submit" class="btn btn-primary">
+            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+            Connexion avec Facebook
+          </button>
+
+          <button
+            style="background: transparent; width: 51%; position: relative; bottom: 38px; left: 250px; color: white"
+            type="submit"
+            class="btn btn-primary"
+          >
+            <fa-icon [icon]="['fab','google']"></fa-icon>
+            Connexion avec Gmail
+          </button>
+          <h6 style="position:relative;left:150px">
+           <a href="resetPassword" target="_blank" style="text-decoration: none"> Mot de passe oublié ?</a>
+          </h6>
+        </form>
+      </div>
+    </div>
+
+    <div style="position: relative; left: 71px; top: 70px; width: 40%; height: 450px; border-radius: 30%" class="card">
+      <img
+        src="https://img.freepik.com/premium-vector/navigation-route-track-mobile-cell-phone-app-3d-icon-vector-city-map-with-gps-location-pin-pointer-marker-delivery-shipping-geo-location-online-cellphone-smartphone-image-run-fitness-tracker_101884-2170.jpg?w=2000"
+        alt="React Image"
+      />
+    </div>
+  </div>
+</div>
+
+</body>

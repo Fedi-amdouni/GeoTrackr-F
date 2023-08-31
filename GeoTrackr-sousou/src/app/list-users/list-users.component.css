@@ -1,0 +1,98 @@
+.header-row {
+  background-color: midnightblue;
+  color: white;
+}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+*{
+
+}
+
+
+table {
+  position: relative;
+  top:70px;
+  left:25px;
+  background-color: #cecdde;
+  border-collapse: collapse;
+  width: 179%;
+  overflow: auto;
+
+
+
+}
+
+
+tr.HEADER1 {
+  background-color: midnightblue;
+  color: white;
+}
+
+
+td.mat-cell {
+  color: #333333;
+  padding: 8px;
+  text-align: left;
+}
+
+tr.mat-row {
+  border-bottom: 1px solid #cccccc;
+
+}
+
+tr.mat-row:hover {
+  background-color: #f1f1f1;
+}
+
+.mat-column-position,
+.mat-column-weight {
+  text-align: center;
+}
+
+
+.mat-elevation-z8 {
+  box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.modal-dialog {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.mat-dialog-container {
+  background-color: #f5f5f5; /* Background color of the dialog container */
+  width:500px;
+  height:500px
+}
+h1{
+  position: relative;
+  left:500px;
+  top:30px;
+  color:midnightblue;
+  font-family: Bahnschrift;
+}
+.dialog-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: midnightblue;
+}
+
+.dialog-body {
+  color: #333333;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog-footer button {
+  background-color: midnightblue; /* Background color of the Save button */
+  color: #ffffff; /* Text color of the Save button */
+  position: relative;
+  right:10px
+}

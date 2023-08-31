@@ -1,0 +1,188 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div style="display: flex; flex-direction: row">
+<h1>
+  Liste des traces
+</h1>
+  <ng-template #content let-modal>
+    <div class="mat-dialog-container">
+      <div class="modal-header">
+        <div class="dialog-title">Ajouter Trace</div>
+        <button class="btn-close" aria-label="Close" (click)="modal.dismiss()" >
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <div class="dialog-body">
+        <form [formGroup]="updateTraceForm">
+          <div class="row">
+
+            <div  class="col-md-11">
+              <div style="margin-left: 20px" class="form-group">
+                <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="label">Label</label>
+                <input formControlName="label" type="text" class="form-control" name="label" id="label" placeholder="label ">
+              </div>
+            </div>
+
+
+            <div  class="col-md-11">
+              <div style="margin-left: 20px" class="form-group">
+                <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="longitudes">Longitudes</label>
+                <input formControlName="longitudes" type="text" class="form-control" name="Longitudes" id="Longitudes" placeholder="Longitudes">
+              </div>
+            </div>
+
+
+            <div  class="col-md-11">
+              <div style="margin-left: 20px" class="form-group">
+                <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="latitudes">Latitudes</label>
+                <input formControlName="latitudes" type="text" class="form-control" name="latitudes" id="latitudes" placeholder="latitudes">
+              </div>
+            </div>
+            <br>
+          </div>
+        </form>
+      </div>
+      <br>
+      <br>
+      <div class="dialog-footer">
+        <button class="btn btn-outline-dark" (click)="onAddTrace();modal.dismiss()">Save</button>
+      </div>
+    </div>
+  </ng-template>
+  <button class="ADD" mat-icon-button  (click)="open(content)">
+
+
+    <mat-icon>add</mat-icon>
+  </button>
+
+</div>
+<div class="table-container">
+  <table style="width: 256%;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="ID">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{getRowNumber(i)}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="label">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef>
+        <div contenteditable="true" id="column-label" (input)="onFilterInput($event, 'label')" #headerContent> Label </div>
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.label}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="longitudes">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef>  <div contenteditable="true" id="column-longitudes" (input)="onFilterInput($event, 'longitudes')" #headerContent> Longitudes </div> </th>
+      <td mat-cell *matCellDef="let element"> {{element.longitudes}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="latitudes">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef>  <div contenteditable="true" id="column-latitudes" (input)="onFilterInput($event, 'latitudes')" #headerContent> Latitudes </div> </th>
+      <td mat-cell *matCellDef="let element"> {{element.latitudes}} </td>
+    </ng-container>
+
+
+    <ng-container  matColumnDef="modif">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef> Modif
+      <td  mat-cell *matCellDef="let i">
+        <ng-template #content let-modal>
+          <div class="mat-dialog-container">
+            <div class="modal-header">
+              <div class="dialog-title">Modifier Trace</div>
+              <button class="btn-close" aria-label="Close" (click)="modal.dismiss()" >
+                <mat-icon>close</mat-icon>
+              </button>
+            </div>
+            <div class="dialog-body">
+              <form [formGroup]="updateTraceForm">
+                <div class="row">
+
+                  <div  class="col-md-11">
+                    <div style="margin-left: 20px" class="form-group">
+                      <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="label">Label</label>
+                      <input formControlName="label" type="text" class="form-control" name="label" id="label" placeholder="label ">
+                    </div>
+                  </div>
+
+
+                  <div  class="col-md-11">
+                    <div style="margin-left: 20px" class="form-group">
+                      <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="longitudes">Longitudes</label>
+                      <input formControlName="longitudes" type="text" class="form-control" name="Longitudes" id="Longitudes" placeholder="Longitudes">
+                    </div>
+                  </div>
+
+
+                  <div  class="col-md-11">
+                    <div style="margin-left: 20px" class="form-group">
+                      <label style="color:midnightblue ;font-family: Bahnschrift" class="label" for="latitudes">Latitudes</label>
+                      <input formControlName="latitudes" type="text" class="form-control" name="latitudes" id="latitudes" placeholder="latitudes">
+                    </div>
+                  </div>
+
+
+
+
+                  <br>
+
+                </div>
+              </form>
+            </div>
+            <br>
+            <br>
+            <div class="dialog-footer">
+              <button class="btn btn-outline-dark" (click)="OnUpdateTrace(i.id);modal.dismiss()">Save</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <button style="position:relative;bottom:30px"  mat-icon-button class="removeCart" (click)="open(content)">
+          <hr>
+          <pre >{{ closeResult }}</pre>
+          <mat-icon>edit</mat-icon>
+        </button>
+
+      </td>
+    </ng-container>
+    <ng-container  matColumnDef="suppression">
+      <th style="color: white;font-family: Bahnschrift"  mat-header-cell *matHeaderCellDef >Suppression</th>
+      <td mat-cell *matCellDef="let element ">
+        <button (click)="onDeleteTrace(element['id'])" mat-icon-button class="removeCart"  >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row  class="HEADER" *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div style="position: relative; left: 350px;">
+  <mat-paginator
+    #paginator
+    [length]="totalRows"
+    [pageIndex]="currentPage"
+    [pageSize]="pageSize"
+
+    (page)="pageChanged($event)"
+    aria-label="Select page"
+
+
+    showFirstLastButtons
+  >
+  </mat-paginator>
+</div>

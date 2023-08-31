@@ -1,0 +1,118 @@
+<body>
+
+<div>
+  <img src="../../assets/GEOTRACKER.png" alt="notFound" style="position: relative; left: 600px; top: 50px" />
+  <img src="../../assets/Talan.png" style="position: relative; right: 450px; width: 10%; height: 4%; top: 0px" />
+  <div class="container mt-5 d-flex justify-content-center">
+    <div
+      style="background: rgba(0, 0, 0, 0.1); position: relative; left: 70px; top: 70px; width: 40%; height: 510px; border-radius: 10%"
+      class="card"
+    >
+      <div class="card-body">
+        <h3 style="color: white; position: relative; left: 60px" class="card-title">
+          <a style="color: white" href="/Register">Inscription</a>
+        </h3>
+        <h3 style="color: white; position: relative; left: 270px; bottom: 41px" class="card-title">
+          <a style="color: white; text-decoration: none" href="">Connexion</a>
+        </h3>
+        <form [formGroup]="addUserForm" style="display: flex; flex-direction: column">
+          <div style="display: flex; flex-direction: row">
+            <div>
+              <h5 for="firstName">Nom:</h5>
+              <input
+                style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 90%"
+                name="firstName"
+                formControlName="firstName"
+                type="text"
+                id="firstName"
+                class="form-control"
+
+              />
+            </div>
+            <div class="form-group">
+              <h5 for="lastName">Prénom:</h5>
+              <input
+                style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 90%"
+                name="lastName"
+                formControlName="lastName"
+                type="text"
+                id="lastName"
+                class="form-control"
+
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <h5 for="adrMail">Adresse mail:</h5>
+            <input
+              style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 85%"
+              name="adrMail"
+              formControlName="adrMail"
+              type="text"
+              id="adrMail"
+              class="form-control"
+
+            />
+          </div>
+          <div style="display: flex; flex-direction: row">
+            <div>
+              <h5 for="pass">Mot de passe:</h5>
+              <input
+                style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 90%"
+                name="pass"
+                formControlName="pass"
+                type="password"
+                id="pass"
+                class="form-control"
+
+              />
+            </div>
+            <div class="form-group">
+              <h5 for="rePass">Confirmation:</h5>
+              <input
+                style="border: none; background: transparent; border-bottom: 1px solid #fff; color: white; width: 90%"
+                name="rePass"
+                formControlName="rePass"
+                type="password"
+                id="rePass"
+                class="form-control"
+
+              />
+            </div>
+          </div>
+
+          <br>
+          <button style="width: 40%; position: relative; left: 140px; border-radius: 10%" type="submit" class="btn btn-primary" (click)="routing()">
+            S'inscrire
+          </button>
+<br>
+          <p style="position: relative; left: 220px">OU</p>
+          <button style="background: transparent; width: 51%; color: white" type="submit" class="btn btn-primary">
+            <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+            Connexion avec Facebook
+          </button>
+
+          <button
+            style="background: transparent; width: 51%; position: relative; bottom: 38px; left: 250px; color: white"
+            type="submit"
+            class="btn btn-primary"
+          >
+            <fa-icon [icon]="['fab', 'google']"></fa-icon>
+
+            Connexion avec Gmail
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    <div style="position: relative; left: 71px; top: 70px; width: 40%; height: 450px; border-radius: 30%" class="card">
+      <img
+        src="https://img.freepik.com/premium-vector/navigation-route-track-mobile-cell-phone-app-3d-icon-vector-city-map-with-gps-location-pin-pointer-marker-delivery-shipping-geo-location-online-cellphone-smartphone-image-run-fitness-tracker_101884-2170.jpg?w=2000"
+        alt="React Image"
+      />
+    </div>
+  </div>
+</div>
+
+</body>

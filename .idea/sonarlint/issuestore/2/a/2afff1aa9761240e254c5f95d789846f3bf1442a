@@ -1,0 +1,5 @@
+
+Ktypescript:S1128"/Remove this unused import of 'BehaviorSubject'.(ЙЯБЯ
+Ftypescript:S1128"*Remove this unused import of 'catchError'.(ЙЯБЯ
+>typescript:S1128""Remove this unused import of 'of'.(ЙЯБЯ
+Уtypescript:S1874c"±'throwError' is deprecated. Support for passing an error value will be removed in v8. Instead, pass a factory function to `throwError(() => new Error('test'))`. This is\u0010because it will create the error at the moment it should be created and capture a more appropriate stack trace. If\u0010for some reason you need to create the error ahead of time, you can still do that: `const err = new Error('test'); throwError(() => err);`.(—ОШхъяяяя
